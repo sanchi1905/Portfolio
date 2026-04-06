@@ -2802,6 +2802,12 @@
                     Resume versions available: AI/ML Focused, Frontend Focused, and Mixed Full-Stack AI.
                 </p>
                 <div class="resume-actions">
+                    <a href="sanchiAIML.pdf" target="_blank" class="btn btn-outline" rel="noopener noreferrer">
+                        <i class="fas fa-file-pdf"></i> Open AI/ML Resume
+                    </a>
+                    <a href="sanchi-developer%20resume.pdf" target="_blank" class="btn btn-outline" rel="noopener noreferrer">
+                        <i class="fas fa-file-pdf"></i> Open Full Stack Resume
+                    </a>
                     <a href="mailto:sanchisisodia121@gmail.com?subject=Resume Request&body=Hi Sanchi, I would like to request your resume." class="btn btn-primary">
                         <i class="fas fa-envelope"></i> Request Resume via Email
                     </a>
@@ -3073,12 +3079,16 @@
             }
         });
 
+        const resumeFiles = {
+            aiml: 'sanchiAIML.pdf',
+            fullstack: 'sanchi-developer%20resume.pdf'
+        };
+        let selectedResumeType = 'aiml';
+
         // Resume Download
         function downloadResume() {
-            // You can host your resume on Google Drive or GitHub and link it here
-            alert('Resume download will be available soon! For now, please contact me directly at sanchisisodia121@gmail.com');
-            // Uncomment and add your resume link:
-            // window.open('YOUR_RESUME_LINK_HERE', '_blank');
+            const resumeUrl = resumeFiles[selectedResumeType] || resumeFiles.aiml;
+            window.open(resumeUrl, '_blank');
         }
 
         // Konami Code Easter Egg
@@ -3189,9 +3199,10 @@
             } else {
                 tabs[1].classList.add('active');
             }
-            
-            // You can add logic here to show different resume PDFs when you have them
-            console.log(`Switched to ${type} resume`);
+
+            selectedResumeType = type;
+            const resumeUrl = resumeFiles[type] || resumeFiles.aiml;
+            window.open(resumeUrl, '_blank');
         }
 
         // Scroll animations
