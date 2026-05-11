@@ -503,12 +503,36 @@
         .project-image {
             width: 100%;
             height: 200px;
-            background: rgba(168, 85, 247, 0.1);
+            background: linear-gradient(135deg, rgba(168, 85, 247, 0.18), rgba(6, 182, 212, 0.18));
             border-radius: 10px;
             margin-bottom: 1.5rem;
             overflow: hidden;
             position: relative;
             cursor: pointer;
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(120deg, rgba(255, 255, 255, 0.06), transparent 60%),
+                repeating-linear-gradient(
+                    0deg,
+                    rgba(255, 255, 255, 0.04) 0px,
+                    rgba(255, 255, 255, 0.04) 1px,
+                    transparent 1px,
+                    transparent 22px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    rgba(255, 255, 255, 0.04) 0px,
+                    rgba(255, 255, 255, 0.04) 1px,
+                    transparent 1px,
+                    transparent 22px
+                );
+            opacity: 0.6;
+            pointer-events: none;
         }
 
         .project-image img {
@@ -531,6 +555,7 @@
             font-size: 3rem;
             background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(6, 182, 212, 0.1));
         }
+
 
         .demo-badge {
             position: absolute;
@@ -1777,7 +1802,7 @@
         <div class="hero-image">
             <div class="profile-container">
                 <div class="profile-circle">
-                    <img src="profile.jpeg" alt="Sanchi Sisodia">
+                    <img src="WhatsApp Image 2026-05-10 at 10.32.59 PM.jpeg" alt="Sanchi Sisodia">
                 </div>
                 <div class="floating-badge badge-1"><i class="fas fa-code"></i> Developer</div>
                 <div class="floating-badge badge-2"><i class="fas fa-brain"></i> AI/ML</div>
@@ -2248,7 +2273,7 @@
         <div class="projects-grid">
             <div class="project-card">
                 <div class="project-image">
-                    <div class="project-placeholder">🌾</div>
+                    <img src="project-images/krishi-saathi.png" alt="Krishi Saathi project preview">
                 </div>
                 <h3>🌾 Krishi Saathi - Agricultural AI Platform</h3>
                 <p>Comprehensive AI-powered agricultural platform for Indian farmers featuring Google Gemini AI chatbot, ML-based crop recommendations, plant disease detection (98%+ accuracy), real-time weather monitoring, and multilingual support. Full-stack application with Node.js backend, PostgreSQL database, and React Native mobile app.</p>
@@ -2269,7 +2294,7 @@
 
             <div class="project-card">
                 <div class="project-image">
-                    <div class="project-placeholder">💹</div>
+                    <img src="project-images/finflow.png" alt="FinFlow project preview">
                 </div>
                 <h3>💹 FinFlow - Personal Finance Tracker</h3>
                 <p>Modern finance management application focused on tracking income, expenses, and spending patterns. Designed to simplify budgeting with a clean UI and practical workflow for daily money management.</p>
@@ -2288,7 +2313,7 @@
 
             <div class="project-card">
                 <div class="project-image">
-                    <div class="project-placeholder">🌦️</div>
+                    <img src="project-images/weather-dashboard.png" alt="WeatherDashboard project preview">
                 </div>
                 <h3>🌦️ WeatherDashboard</h3>
                 <p>Interactive weather dashboard that presents current conditions and key forecast insights in a user-friendly format. Built to provide quick, glanceable weather intelligence with a responsive frontend.</p>
@@ -2436,8 +2461,8 @@
             </div>
 
             <div class="project-card">
-                <div class="project-image" onclick="window.open('https://mindease-aellzg0fx-sanchi-sisodias-projects.vercel.app', '_blank')">
-                    <div class="project-placeholder">🧠</div>
+                <div class="project-image" onclick="window.open('https://mindease-git-main-sanchi-sisodias-projects.vercel.app/', '_blank')">
+                    <img src="project-images/mindease.png" alt="MindEase project preview">
                     <div class="demo-badge"><i class="fas fa-play-circle"></i> Live Demo</div>
                 </div>
                 <h3>🧠 MindEase - AI Mental Wellness App</h3>
@@ -2450,14 +2475,14 @@
                     <span class="tag">Responsive UI</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://mindease-aellzg0fx-sanchi-sisodias-projects.vercel.app" target="_blank">View Live ➜</a>
+                    <a href="https://mindease-git-main-sanchi-sisodias-projects.vercel.app/" target="_blank">View Live ➜</a>
                     <a href="https://github.com/sanchi1905/mindease" target="_blank">View Code ➜</a>
                 </div>
             </div>
 
             <div class="project-card">
                 <div class="project-image" onclick="window.open('https://sentiment-analysis-app-sanchi.streamlit.app/', '_blank')">
-                    <div class="project-placeholder">😊</div>
+                    <img src="project-images/sentiment-analysis.png" alt="Sentiment Analysis project preview">
                     <div class="demo-badge"><i class="fas fa-play-circle"></i> Live Demo</div>
                 </div>
                 <h3>😊 Sentiment Analysis for Depression Detection</h3>
@@ -2471,7 +2496,55 @@
                 </div>
                 <div class="project-links">
                     <a href="https://sentiment-analysis-app-sanchi.streamlit.app/" target="_blank">View Live ➜</a>
-                    <a href="https://github.com/sanchi1905" target="_blank">View Code ➜</a>
+                    <a href="https://github.com/sanchi1905/sentiment-analysis-app" target="_blank">View Code ➜</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-placeholder">💬</div>
+                </div>
+                <h3>💬 Live Chat App</h3>
+                <p>Live chat application repository focused on clean UI and fast, responsive messaging flows.</p>
+                <div class="project-tech">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Web App</span>
+                    <span class="tag">UI/UX</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/sanchi1905/Live-Chat-App" target="_blank">View Code ➜</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-placeholder">📈</div>
+                </div>
+                <h3>📈 Pricing Dashboard</h3>
+                <p>Pricing dashboard repository showcasing structured layouts and clean data presentation for pricing insights.</p>
+                <div class="project-tech">
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Dashboard</span>
+                    <span class="tag">UI</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/sanchi1905/pricing_dashboard" target="_blank">View Code ➜</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="project-placeholder">🧩</div>
+                </div>
+                <h3>🧩 Portfolio Website (Source)</h3>
+                <p>Source code for the portfolio website, showcasing layout, styling, and interactive UI sections.</p>
+                <div class="project-tech">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/sanchi1905/Portfolio" target="_blank">View Code ➜</a>
                 </div>
             </div>
 
@@ -2556,7 +2629,7 @@
                     Visit my <a href="https://github.com/sanchi1905" target="_blank" style="color: var(--primary); text-decoration: none;">GitHub Profile <i class="fas fa-external-link-alt"></i></a> to see my latest projects and contributions!
                 </p>
                 <div style="margin-top: 1.5rem; padding: 2rem; background: rgba(168, 85, 247, 0.05); border-radius: 10px;">
-                    <img src="https://ghchart.rshah.org/a855f7/sanchi1905" alt="GitHub Contribution Chart" style="width: 100%; border-radius: 5px;" />
+                    <img src="https://ghchart.rshah.org/239a3b/sanchi1905" alt="GitHub Contribution Chart" style="width: 100%; border-radius: 5px;" />
                 </div>
             </div>
         </div>
